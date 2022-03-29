@@ -1,0 +1,111 @@
+.mobile-menu {
+    display: none;
+}
+
+.menu-button {
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    align-self: flex-start;
+    background-color: transparent;
+    background-image: url('../img/menu-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    z-index: 2;
+}
+
+.mobile-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #A67449;
+}
+
+.mobile-items {
+    display: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mobile-items li {
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-items a {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.open-menu {
+    display: flex;
+    animation: fadeInRight 1s;
+}
+  
+.close-menu {
+    animation: fadeOutRight 1s;
+}
+
+.open-button {
+    animation: open-button 1s;
+    animation-fill-mode: forwards;
+    position: fixed;
+}
+
+.close-button {
+    animation: close-button 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open-button {
+    from {
+        transform: rotate(0deg);
+        background-image: url('../img/menu-button.png');
+    }
+
+    to {
+        transform: rotate(90deg);
+        background-image: url('../img/close-menu.png');
+    }
+}
+
+@keyframes close-button {
+    from {
+        transform: rotate(90deg);
+        background-image: url('../img/close-menu.png');
+    }
+    
+    to {
+        transform: rotate(0deg);
+        background-image: url('../img/menu-button.png');
+    }
+}

@@ -1,0 +1,48 @@
+.project {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+}
+
+.project-text {
+    width: 50%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.project-paragraph {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .project {
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-text {
+        width: 90%;
+    }
+
+    .project-title {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .project-paragraph {
+        font-size: 18px;
+        text-align: center;
+    }
+}

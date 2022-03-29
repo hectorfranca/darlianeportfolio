@@ -1,0 +1,75 @@
+.carousel {
+    height: auto;
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-previous, .carousel-next {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-image: url('../img/right-arrow.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: solid black 1px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.carousel-previous {
+    margin-left: 50px;
+    transform: scale(-1);
+}
+
+.carousel-next {
+    margin-left: 500px;
+}
+
+.carousel-items {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    border-radius: 5px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 600px;
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel, .carousel-item img {
+        width: 300px;
+    }
+
+    .carousel-previous, .carousel-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-previous {
+        margin-left: 5px;
+    }
+
+    .carousel-next {
+        margin-left: 265px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .carousel, .carousel-item img {
+        width: 350px;
+    }
+
+    .carousel-previous {
+        margin-left: 5px;
+    }
+
+    .carousel-next {
+        margin-left: 295px;
+    }
+}

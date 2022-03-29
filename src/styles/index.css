@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+.animate-left {
+  visibility: visible !important;
+  animation: fadeInLeft 1s;
+}
+
+.animate-right {
+  visibility: visible !important;
+  animation: fadeInRight 1s;
+}
+
+.animate-fadein {
+  visibility: visible !important;
+  animation: fadeIn 1s;
+}
+
+.enable-scroll {
+  overflow: auto;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
